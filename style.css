@@ -1,0 +1,152 @@
+/* accent color: #516458 
+main color: #efefe9;
+headers color: #111926
+nav list color : #453a50
+moving bar color : #465a4e
+for headers font familly:  reforesta,arial  45px
+for navlist text merlo_neue_round,arial 15px
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  --main-color: #efefe9;
+  --accent-color: #516458;
+  --mv-bar-color: #465a4e;
+  --headers-color: #111926;
+  --text-color: #453a50;
+  --fm-headers: Lora;
+  --fm-text: Quicksand;
+  --fz-headers: 75px;
+  --fz-text: 16px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--main-color);
+  font-size: var(--fz-text);
+}
+/* remove this when you finish */
+img {
+  width: 30px;
+  height: 30px;
+}
+a {
+  text-decoration: none;
+}
+header {
+  width: 100%;
+  height: auto;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo img {
+  width: 35px;
+  height: auto;
+}
+header .links {
+  display: flex;
+}
+header .links li {
+  list-style-type: none;
+  padding: 20px 15px;
+}
+header .links li a {
+  font-size: var(--fm-text);
+  font-family: var(--fm-text);
+  color: var(--text-color);
+}
+header .links-others {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .links-others button {
+  border: none;
+}
+.icons {
+  width: 22px;
+  height: auto;
+}
+
+/* hero section*/
+
+/* Container must be relative so children can be absolute */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Full screen height */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  overflow: hidden;
+  color: white;
+}
+
+/* Make video cover the entire area */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This is the secret for background videos */
+  z-index: -2; /* Place at the bottom */
+}
+
+/* Dark overlay to make text pop */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Black with 40% transparency */
+  z-index: -1; /* Above video, below text */
+}
+
+/* Content styling */
+.content {
+  text-align: start;
+  z-index: 1; /* Keep text at the very top */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.content span {
+  text-transform: uppercase;
+  color: var(--main-color);
+  font-family: var(--fm-text);
+  font-size: var(--fz-text);
+}
+.content h1 {
+  color: var(--main-color);
+  font-family: var(--fm-headers);
+  font-size: var(--fz-headers);
+}
+.content p {
+  color: var(--main-color);
+  font-family: var(--fm-text);
+  font-size: var(--fz-text);
+}
+
+.content .hero-btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.content .hero-btns button {
+  width: 300px;
+  padding: 15px;
+  font-weight: 800;
+  margin-top: 10px;
+}
