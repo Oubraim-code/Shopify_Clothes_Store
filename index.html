@@ -20,15 +20,15 @@
         <li><a href="#">IMPACT</a></li>
       </ul>
       <div class="links-others">
-        <span class="profile">
+        <a href="#" class="profile">
           <img class="icons" src="imgs/icons8-profile-24.png" alt="" />
-        </span>
+        </a>
         <button class="search">
           <img class="icons" src="imgs/icons8-search-24.png" alt="" />
         </button>
-        <span class="cart">
+        <a href="#" class="cart">
           <img class="icons" src="imgs/icons8-cart-24.png" alt="" />
-        </span>
+        </a>
       </div>
     </header>
     <section class="hero-container">
@@ -57,6 +57,72 @@
           <button>SHOP WOMENS</button>
           <button>SHOP MENS</button>
         </div>
+      </div>
+    </section>
+
+    <section class="section-wrapper">
+      <!-- Header -->
+      <div class="section-header">
+        <h2 class="section-title">New Arrivals</h2>
+        <div class="nav-arrows">
+          <button class="nav-btn" id="btn-prev" aria-label="Previous">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M15 18l-6-6 6-6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button class="nav-btn" id="btn-next" aria-label="Next">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M9 18l6-6-6-6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- <img src="" alt=""> -->
+      <!-- Tabs -->
+      <nav class="tabs">
+        <span class="tab active">Women's</span>
+        <span class="tab">Men's</span>
+        <span class="tab">Accessories</span>
+      </nav>
+      <div class="products-scroll" id="scroll-track">
+        <div class="products-grid" id="products-grid"></div>
+      </div>
+    </section>
+
+    <section class="section-wrapper catergorie">
+      <div class="section-header">
+        <h2 class="section-title">Most Popular Categories</h2>
+        <div class="nav-arrows">
+          <button class="nav-btn" id="cat-btn-prev" aria-label="Previous">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M15 18l-6-6 6-6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button class="nav-btn" id="cat-btn-next" aria-label="Next">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M9 18l6-6-6-6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="categories-scroll" id="cat-scroll-track">
+        <div class="categories-grid" id="categories-grid"></div>
       </div>
     </section>
     <script src="script.js"></script>
