@@ -407,3 +407,9 @@ header .links-others button {
     transform: translateX(-50%);
   } /* -50% = width of one group */
 }
+/* 
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+  }
+} */
