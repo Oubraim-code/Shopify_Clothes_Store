@@ -311,7 +311,8 @@ header .links-others button {
   transition: transform 0.4s ease;
 }
 
-.product-card:hover .card-image img {
+.product-card:hover .card-image img,
+.category-card:hover .cat-image img {
   transform: scale(1.04);
 }
 
@@ -354,4 +355,55 @@ header .links-others button {
   font-size: 0.85rem;
   color: #5a5855;
   font-weight: 300;
+}
+
+/* splide list ===================================================================================== */
+
+.ticker-wrapper {
+  background: #3a5a45;
+  overflow: hidden; /* hides content outside the band */
+  white-space: nowrap; /* prevents line breaks */
+  padding: 1rem 0;
+  margin: 30px 0;
+}
+
+.ticker-track {
+  display: inline-flex; /* both groups sit side by side */
+  animation: ticker 18s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused; /* pause on hover — optional */
+}
+
+.ticker-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding-right: 2.5rem; /* gap between the two groups */
+}
+
+.ticker-num {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.ticker-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+}
+
+/* The key: slide exactly one group width to the left, then snap back */
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  } /* -50% = width of one group */
 }
